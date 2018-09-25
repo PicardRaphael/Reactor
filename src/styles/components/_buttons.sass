@@ -1,0 +1,38 @@
+%button-primary
+  display: inline-block
+  font-family: 'BPdots'
+  padding: .5em .7em .6em
+  background: $grey-primary
+  border-radius: $radius-secondary
+  position: relative
+  font-size: 1.3rem
+  font-weight: 600
+  letter-spacing: .05em
+  color: $white
+  border: none;
+
+  $border-size: 3px
+
+  &:before
+    top: -$border-size
+
+  &:after
+    bottom: -$border-size
+
+  &:before,
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    height: $border-size
+    left: $border-size
+    right: $border-size
+    background: radial-gradient(circle, rgba(97, 219, 251, 0.7) 0%, transparent 100%)
+
+  &:hover, &:focus, &:active
+    background: $blue-primary
+    color: $grey-primary
+
+    &:before,
+    &:after
+      background: radial-gradient(circle, rgba(27, 27, 27, 0.7) 0%, transparent 100%)
